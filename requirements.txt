@@ -1,2 +1,2 @@
-discord.py==2.4.0
-prometheus_client==0.21.1
+discord.py>=2.4.0
+prometheus_client>=0.21.1
