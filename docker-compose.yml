@@ -1,0 +1,16 @@
+services:
+  discord-counter:
+    image: discord-channel-counter
+    restart: unless-stopped
+    ports:
+      - "8001:8001"
+    volumes:
+      - counter-data:/data
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - CHANNEL_ID=${CHANNEL_ID}
+      - METRICS_PORT=8000
+      - STATE_FILE=/data/counter.txt
+
+volumes:
+  counter-data:
